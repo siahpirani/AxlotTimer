@@ -1,0 +1,71 @@
+[gd_scene load_steps=2 format=3 uid="uid://ow5vcvt2dgdo"]
+
+[ext_resource type="Script" path="res://StopWatch/StopWatchFullScreen.gd" id="1_cyuif"]
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(0, 579)
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_top = -588.0
+offset_right = 1088.0
+offset_bottom = 1343.0
+script = ExtResource("1_cyuif")
+
+[node name="TextureRect" type="TextureRect" parent="Control"]
+layout_mode = 0
+offset_right = 1088.0
+offset_bottom = 1931.0
+
+[node name="Label_StopWatch" type="Label" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.524
+anchor_top = 0.5
+anchor_right = 0.524
+anchor_bottom = 0.5
+offset_left = -329.112
+offset_top = -504.5
+offset_right = 329.888
+offset_bottom = -367.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 100
+text = "00:00:00"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="StartEndButton_StopWatch" type="Button" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.216912
+anchor_top = 0.460901
+anchor_right = 0.216912
+anchor_bottom = 0.460901
+offset_left = 74.0
+offset_top = 279.0
+offset_right = 538.0
+offset_bottom = 489.0
+theme_override_font_sizes/font_size = 50
+text = "End"
+metadata/_edit_use_anchors_ = true
+
+[node name="PauseResumeButton_StopWatch2" type="Button" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.223052
+anchor_top = 0.637464
+anchor_right = -0.223052
+anchor_bottom = 0.637464
+offset_left = 565.0
+offset_top = 279.0
+offset_right = 1029.0
+offset_bottom = 489.0
+theme_override_font_sizes/font_size = 50
+text = "Pause/Resume"
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="Control/StartEndButton_StopWatch" to="Control" method="_on_start_end_button_stop_watch_pressed"]
+[connection signal="pressed" from="Control/PauseResumeButton_StopWatch2" to="Control" method="_on_pause_resume_button_stop_watch_2_pressed"]

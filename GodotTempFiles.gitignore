@@ -1,0 +1,10 @@
+.import/
+.godot/
+*.cfg
+*.translation
+*.material
+*.tex
+*.tscn.converted
+*.res
+_build/
+export_*

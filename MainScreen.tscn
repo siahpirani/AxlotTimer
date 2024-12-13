@@ -1,0 +1,34 @@
+[gd_scene load_steps=2 format=3 uid="uid://ctjlsfhrvhnwq"]
+
+[ext_resource type="Script" path="res://MainSceneScript.gd" id="1_4ogxp"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1081.0
+offset_bottom = 1928.0
+script = ExtResource("1_4ogxp")
+
+[node name="BottomMenu" type="HBoxContainer" parent="Control"]
+layout_mode = 0
+offset_top = 1758.0
+offset_right = 1081.0
+offset_bottom = 1928.0
+alignment = 1
+
+[node name="TimersPannleButton" type="Button" parent="Control/BottomMenu"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Timers"
+
+[node name="GoalsButton" type="Button" parent="Control/BottomMenu"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Goals"
+
+[connection signal="pressed" from="Control/BottomMenu/TimersPannleButton" to="Control" method="_on_timers_pannle_button_pressed"]
+[connection signal="pressed" from="Control/BottomMenu/GoalsButton" to="Control" method="_on_goals_button_pressed"]

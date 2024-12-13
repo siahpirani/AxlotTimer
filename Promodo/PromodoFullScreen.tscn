@@ -1,0 +1,65 @@
+[gd_scene load_steps=2 format=3 uid="uid://cex4gaifibfni"]
+
+[ext_resource type="Script" path="res://Promodo/PromodoScript.gd" id="1_0nbwm"]
+
+[node name="PromodoFullScreen" type="Node2D"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1078.0
+offset_bottom = 1906.0
+script = ExtResource("1_0nbwm")
+
+[node name="End_Promodo" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 308.0
+offset_top = 1050.0
+offset_right = 772.0
+offset_bottom = 1260.0
+theme_override_font_sizes/font_size = 50
+text = "End"
+
+[node name="PauseResumeButton_Promodo2" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 308.0
+offset_top = 1446.0
+offset_right = 772.0
+offset_bottom = 1656.0
+theme_override_font_sizes/font_size = 50
+text = "Pause/Resume"
+
+[node name="WorkTimer" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 155.0
+offset_top = 279.0
+offset_right = 841.0
+offset_bottom = 423.0
+theme_override_font_sizes/font_size = 100
+text = "00:00:00"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Rest Timer" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 155.0
+offset_top = 498.0
+offset_right = 841.0
+offset_bottom = 642.0
+theme_override_font_sizes/font_size = 100
+text = "00:00:00"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Sessionnumber" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 155.0
+offset_top = 758.0
+offset_right = 841.0
+offset_bottom = 902.0
+theme_override_font_sizes/font_size = 100
+text = "00:00:00"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="Control/End_Promodo" to="Control" method="_on_end_promodo_pressed"]

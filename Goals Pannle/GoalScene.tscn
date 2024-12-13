@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=3 uid="uid://ctp2nmut7n4nk"]
+
+[ext_resource type="Script" path="res://Goals Pannle/GoalsScript.gd" id="1_l6v2d"]
+
+[node name="GoalScene" type="Node2D"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1081.0
+offset_bottom = 1622.0
+script = ExtResource("1_l6v2d")
+
+[node name="Label" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 146.0
+offset_top = 331.0
+offset_right = 931.0
+offset_bottom = 775.0
+theme_override_font_sizes/font_size = 200
+text = "Goals"
+horizontal_alignment = 1
+vertical_alignment = 1

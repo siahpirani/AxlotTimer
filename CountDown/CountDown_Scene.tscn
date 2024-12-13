@@ -1,0 +1,44 @@
+[gd_scene load_steps=2 format=3 uid="uid://cn3ajnp46bm6l"]
+
+[ext_resource type="Script" path="res://CountDown/Countdown_Script.gd" id="1_7xigf"]
+
+[node name="CountDownScene" type="Node2D"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1077.0
+offset_bottom = 1786.0
+script = ExtResource("1_7xigf")
+
+[node name="CountDownText" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 123.0
+offset_top = 504.0
+offset_right = 994.0
+offset_bottom = 709.0
+theme_override_font_sizes/font_size = 100
+text = "00:00:00"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PauseResumeButton_Promodo" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 311.0
+offset_top = 1355.0
+offset_right = 775.0
+offset_bottom = 1565.0
+theme_override_font_sizes/font_size = 50
+text = "Pause/Resume"
+
+[node name="EndButton_countdown" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 311.0
+offset_top = 1054.0
+offset_right = 775.0
+offset_bottom = 1264.0
+theme_override_font_sizes/font_size = 50
+text = "end"
+
+[connection signal="pressed" from="Control/PauseResumeButton_Promodo" to="Control" method="_on_pause_resume_button_promodo_pressed"]
+[connection signal="pressed" from="Control/EndButton_countdown" to="Control" method="_on_end_button_countdown_pressed"]

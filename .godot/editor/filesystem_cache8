@@ -1,0 +1,21 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1734111164
+icon.svg::CompressedTexture2D::3904490113494243773::1733851399::1733851410::1::::<><>::
+MainSceneScript.gd::GDScript::-1::1734015755::0::1::::<>Control<>::
+MainScreen.tscn::PackedScene::6125709101737212440::1734015755::0::1::::<><>::res://MainSceneScript.gd
+stats.gd::GDScript::-1::1733949607::0::1::::<>Node<>::
+TimersControlScript.gd::GDScript::-1::1734014286::0::1::::<>Control<>::
+TimerTab.tscn::PackedScene::1364863811773717253::1734015786::0::1::::<><>::res://TimersControlScript.gd
+::res://CountDown/::1733949072
+CountDown_Scene.tscn::PackedScene::5743115691274166961::1733949072::0::1::::<><>::res://CountDown/Countdown_Script.gd
+Countdown_Script.gd::GDScript::-1::1733948598::0::1::::<>Control<>::
+::res://Goals Pannle/::1734016452
+GoalScene.tscn::PackedScene::6139058299028043008::1734015755::0::1::::<><>::res://Goals Pannle/GoalsScript.gd
+GoalsScript.gd::GDScript::-1::1734014704::0::1::::<>Node<>::
+GoalsShape.tscn::PackedScene::9156327312309427499::1734016452::0::1::::<><>::
+::res://Promodo/::1734015755
+PromodoFullScreen.tscn::PackedScene::5102848950431711998::1734015755::0::1::::<><>::res://Promodo/PromodoScript.gd
+PromodoScript.gd::GDScript::-1::1733955206::0::1::::<>Control<>::
+::res://StopWatch/::1734015755
+StopWatchFullScreen.gd::GDScript::-1::1733948705::0::1::::<>Control<>::
+StopWatchScene.tscn::PackedScene::1029919271363837300::1734015755::0::1::::<><>::res://StopWatch/StopWatchFullScreen.gd
