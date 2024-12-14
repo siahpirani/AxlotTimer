@@ -1,4 +1,5 @@
 extends Control
+
 @onready var CountDownText = $CountDownText
 var countdowntime = 0
 var is_Countdown_paused = false
@@ -14,11 +15,14 @@ func GetTheTime():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if not is_Countdown_paused:
-		countdowntime -= delta  # Increment stopwatch time if not paused
-		time_since_last_coin += delta
-		if time_since_last_coin >= 60:
-			Stats.increment_coins(1)
-			time_since_last_coin = 0
+		if countdowntime > 0: # Check if countdown time is above zero
+			countdowntime -= delta  # Decrement if positive
+			time_since_last_coin += delta
+			if time_since_last_coin >= 60:
+				Stats.increment_coins(1)
+				time_since_last_coin = 0
+		else:
+			countdowntime = 0 # if countdown is 0 or below, set to zero
 		update_CountDown_label()
 
 func update_CountDown_label() -> void:
