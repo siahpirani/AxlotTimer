@@ -50,9 +50,16 @@ func _on_add_goal_button_pressed():
 
 func _on_goal_item_toggled(index:int, completed:bool):
 	if index >= 0 and index < goals.size():
-		goals[index]["completed"] = completed
-		save_goals()
-		print("Goal ", index," completed state:", completed)
+		if completed:
+			goals.remove_at(index)
+			save_goals()
+			update_goal_ui()
+
+		else:
+			goals[index]["completed"] = completed
+			save_goals()
+			print("Goal ", index," completed state:", completed)
+
 
 
 func save_goals():
