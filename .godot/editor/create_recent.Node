@@ -1,9 +1,11 @@
-CheckBox
-HBoxContainer
 Control
 Label
+Button
+Panel
+VBoxContainer
+LineEdit
+CheckBox
+HBoxContainer
 Container
 TextureRect
-Button
 HSlider
-Panel

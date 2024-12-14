@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://d3pnmxjo80x1d"]
+
+[ext_resource type="Texture2D" uid="uid://c64iwl6gi5xeq" path="res://Goals Pannle/square.png" id="1_73toq"]
+[ext_resource type="Script" path="res://Goals Pannle/GoalItem.gd" id="1_do3fu"]
+[ext_resource type="Texture2D" uid="uid://cn53cpr3o7et3" path="res://Goals Pannle/checkbox.png" id="2_c5t5h"]
+
+[node name="HBoxContainer" type="HBoxContainer"]
+offset_left = 147.0
+offset_top = 1193.0
+offset_right = 974.0
+offset_bottom = 1301.0
+alignment = 1
+script = ExtResource("1_do3fu")
+
+[node name="CheckBox" type="CheckBox" parent="."]
+layout_mode = 2
+theme_override_constants/icon_max_width = 100
+theme_override_icons/checked = ExtResource("1_73toq")
+theme_override_icons/unchecked = ExtResource("2_c5t5h")
+alignment = 1
+icon_alignment = 1
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 50
+text = "the goal title"
+horizontal_alignment = 1
+vertical_alignment = 1

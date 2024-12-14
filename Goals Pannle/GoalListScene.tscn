@@ -1,0 +1,78 @@
+[gd_scene load_steps=2 format=3 uid="uid://ctp2nmut7n4nk"]
+
+[ext_resource type="Script" path="res://Goals Pannle/GoalScene.gd" id="1_37fey"]
+
+[node name="GoalScene" type="Node2D"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1081.0
+offset_bottom = 1622.0
+script = ExtResource("1_37fey")
+
+[node name="Label" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 146.0
+offset_top = 331.0
+offset_right = 931.0
+offset_bottom = 775.0
+theme_override_font_sizes/font_size = 200
+text = "Goals"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GoalListContainer" type="VBoxContainer" parent="Control"]
+layout_mode = 0
+offset_top = 926.0
+offset_right = 1081.0
+offset_bottom = 1730.0
+
+[node name="AddingGoalsPannle" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 228.0
+offset_top = 775.0
+offset_right = 820.0
+offset_bottom = 926.0
+theme_override_font_sizes/font_size = 50
+text = "Adding Goal Pannle"
+
+[node name="GoalAddingPannle" type="Panel" parent="Control"]
+visible = false
+layout_mode = 0
+offset_left = 75.0
+offset_top = 535.0
+offset_right = 1003.0
+offset_bottom = 1337.0
+
+[node name="GoalInput" type="LineEdit" parent="Control/GoalAddingPannle"]
+layout_mode = 0
+offset_left = 153.0
+offset_top = 134.0
+offset_right = 745.0
+offset_bottom = 288.0
+theme_override_font_sizes/font_size = 50
+placeholder_text = "Add Your Goal"
+alignment = 1
+
+[node name="AddGoalButton" type="Button" parent="Control/GoalAddingPannle"]
+layout_mode = 0
+offset_left = 153.0
+offset_top = 456.0
+offset_right = 745.0
+offset_bottom = 638.0
+theme_override_font_sizes/font_size = 100
+text = "Add"
+
+[node name="CloseAddingPannle" type="Button" parent="Control/GoalAddingPannle"]
+layout_mode = 0
+offset_left = 787.0
+offset_top = -57.0
+offset_right = 991.0
+offset_bottom = 125.0
+theme_override_font_sizes/font_size = 50
+text = "Close"
+
+[connection signal="pressed" from="Control/AddingGoalsPannle" to="Control" method="_on_adding_goals_pannle_pressed"]
+[connection signal="pressed" from="Control/GoalAddingPannle/AddGoalButton" to="Control" method="_on_add_goal_button_pressed"]
+[connection signal="pressed" from="Control/GoalAddingPannle/CloseAddingPannle" to="Control" method="_on_close_adding_pannle_pressed"]

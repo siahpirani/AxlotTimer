@@ -6,7 +6,7 @@ var Is_GoalsTab_Open: bool = false
 var TimerScene: PackedScene = preload("res://TimerTab.tscn")  # Store the PackedScene
 var TimerPannle: Node = null # Reference to the instance
 
-var GoalsScene: PackedScene = preload("res://Goals Pannle/GoalScene.tscn")
+var GoalsScene: PackedScene = preload("res://Goals Pannle/GoalListScene.tscn")
 var GoalsSceneNode: Node = null
 
 # Called when the node enters the scene tree for the first time.
