@@ -5,10 +5,10 @@
 [ext_resource type="Texture2D" uid="uid://cn53cpr3o7et3" path="res://Goals Pannle/checkbox.png" id="2_c5t5h"]
 
 [node name="HBoxContainer" type="HBoxContainer"]
-offset_left = 147.0
-offset_top = 1193.0
+offset_left = 103.0
+offset_top = 2278.0
 offset_right = 974.0
-offset_bottom = 1301.0
+offset_bottom = 2386.0
 alignment = 1
 script = ExtResource("1_do3fu")
 

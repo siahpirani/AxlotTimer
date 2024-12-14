@@ -1,5 +1,6 @@
-Control
 Label
+CanvasLayer
+Control
 Button
 Panel
 VBoxContainer

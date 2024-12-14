@@ -6,3 +6,9 @@ res://MainSceneScript.gd
 res://Goals Pannle/GoalItem.tscn
 res://Goals Pannle/GoalItem.gd
 res://Goals Pannle/GoalScene.gd
+res://CountDown/Countdown_Script.gd
+res://Promodo/PromodoScript.gd
+res://stats.gd
+res://StopWatch/StopWatchFullScreen.gd
+res://CoinDisplay.tscn
+res://CoinDisplay.gd

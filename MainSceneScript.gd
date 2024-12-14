@@ -9,9 +9,13 @@ var TimerPannle: Node = null # Reference to the instance
 var GoalsScene: PackedScene = preload("res://Goals Pannle/GoalListScene.tscn")
 var GoalsSceneNode: Node = null
 
+var CoinDisplayScene: PackedScene = preload("res://CoinDisplay.tscn")
+var CoinDisplayNode : Node = null
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass  # Placeholder for future code if needed.
+	CoinDisplayNode = CoinDisplayScene.instantiate()
+	add_child(CoinDisplayNode)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

@@ -51,6 +51,7 @@ func _on_add_goal_button_pressed():
 func _on_goal_item_toggled(index:int, completed:bool):
 	if index >= 0 and index < goals.size():
 		if completed:
+			Stats.increment_coins(10) # Add 10 coins
 			goals.remove_at(index)
 			save_goals()
 			update_goal_ui()

@@ -3,6 +3,7 @@ extends Control
 var is_StopWatch_Running: bool = true
 var StopWatch_Time: float = 0.0  # Ensure it's a float
 var is_StopWatch_Paused: bool = false  # New variable to track if stopwatch is paused
+var time_since_last_coin : float = 0 # new variable to track the time since a coin was given
 
 @onready var StopWatch_Label = $Label_StopWatch
 
@@ -14,6 +15,10 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if is_StopWatch_Running and not is_StopWatch_Paused:
 		StopWatch_Time += delta  # Increment stopwatch time if not paused
+		time_since_last_coin += delta
+		if time_since_last_coin >= 60:
+			Stats.increment_coins(1)
+			time_since_last_coin = 0
 		update_stopwatch_label()  # Update the label display
 
 # Function to update the stopwatch label

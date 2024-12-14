@@ -11,6 +11,7 @@ var session_numbers_passed: int = int(Stats.ReturnPromodoSessionNumber())
 var is_work_timer_active: bool = true
 var current_timer: float = 0.0
 var current_session: int = 1
+var time_since_last_coin : float = 0 # new variable to track the time since a coin was given
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -21,6 +22,10 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if current_timer > 0:
 		current_timer -= delta
+		time_since_last_coin += delta
+		if time_since_last_coin >= 60:
+			Stats.increment_coins(1)
+			time_since_last_coin = 0
 		update_ui()
 	else:
 		switch_timer()
