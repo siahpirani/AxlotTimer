@@ -1,0 +1,61 @@
+[gd_scene load_steps=7 format=3 uid="uid://cr1v25v5yepx5"]
+
+[ext_resource type="Script" path="res://coin_animaiton.gd" id="1_32swr"]
+[ext_resource type="AudioStream" uid="uid://brwtl040ynex1" path="res://Audio/coin-257878.mp3" id="2_umd1t"]
+[ext_resource type="Texture2D" uid="uid://keotyckpufqi" path="res://Images/Icon/e26ace0a6c2d0eac4e89c789d6e551bc-32bits-32.png" id="3_pxlf4"]
+
+[sub_resource type="Animation" id="Animation_f2t1c"]
+resource_name = "CoinMovmentAnime"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(538, 991), Vector2(730, 90)]
+}
+
+[sub_resource type="Animation" id="Animation_o5nks"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(538, 991)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_00tth"]
+_data = {
+"CoinMovmentAnime": SubResource("Animation_f2t1c"),
+"RESET": SubResource("Animation_o5nks")
+}
+
+[node name="CoinAnimaiton" type="Node2D"]
+script = ExtResource("1_32swr")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_00tth")
+}
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_umd1t")
+autoplay = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(538, 991)
+scale = Vector2(5.25, 5.25)
+texture = ExtResource("3_pxlf4")
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

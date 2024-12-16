@@ -1,15 +1,21 @@
-[gd_scene load_steps=2 format=3 uid="uid://0r2khds443ys"]
+[gd_scene load_steps=3 format=3 uid="uid://0r2khds443ys"]
 
 [ext_resource type="Script" path="res://CoinDisplay.gd" id="1_f8n6b"]
+[ext_resource type="Texture2D" uid="uid://keotyckpufqi" path="res://Images/Icon/e26ace0a6c2d0eac4e89c789d6e551bc-32bits-32.png" id="2_porbj"]
 
 [node name="CanvasLayer" type="CanvasLayer"]
 script = ExtResource("1_f8n6b")
 
 [node name="Label" type="Label" parent="."]
-offset_left = 265.0
-offset_top = 20.0
-offset_right = 864.0
-offset_bottom = 209.0
+offset_left = 741.0
+offset_right = 1152.0
+offset_bottom = 189.0
 theme_override_font_sizes/font_size = 100
+text = "test"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(730, 90)
+scale = Vector2(5.25, 5.25)
+texture = ExtResource("2_porbj")

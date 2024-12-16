@@ -3,6 +3,7 @@ extends Control
 # Constants to be used in the script
 const GOAL_SAVE_FILE_NAME : String = "/goals.json"
 const COINS_FOR_GOAL_COMPLETION : int = 10
+@onready var CoinaniScene : PackedScene =preload("res://CoinAnimaiton.tscn")
 
 @onready var goal_input : LineEdit = $GoalAddingPannle/GoalInput # Reference to the input line for goals
 @onready var add_goal_button : Button = $GoalAddingPannle/AddGoalButton  # Reference to the button to add a goal
@@ -65,6 +66,7 @@ func _on_goal_item_toggled(index:int, completed:bool) -> void:
 		# If goal was marked as completed, remove the goal
 		if completed:
 			_remove_goal(index)
+
 		# if not marked as completed, update the value
 		else:
 			goals[index]["completed"] = completed
@@ -76,12 +78,16 @@ func _remove_goal(index: int) -> void:
 	# Ensure the index is valid
 	if index >= 0 and index < goals.size():
 		if Stats != null:
-			Stats.increment_coins(COINS_FOR_GOAL_COMPLETION) # Increment coins for completing the goal
+			Stats.increment_coins(COINS_FOR_GOAL_COMPLETION)	
+			 # Increment coins for completing the goal
 		else:
 			printerr("Error: Stats singleton is not available")
 		goals.remove_at(index) # Remove the goal from the array
 		save_goals() # Save goals after removing
 		update_goal_ui() # Update the ui
+		for i in range(COINS_FOR_GOAL_COMPLETION):
+			SpawnCoin()
+			await get_tree().create_timer(0.1).timeout
 	else:
 		printerr("Error: Invalid index in _remove_goal: ", index)
 
@@ -123,3 +129,7 @@ func load_goals() -> void:
 			printerr("Error: Unable to load goals, parsed data not an array")  # Error log
 	else:
 		printerr("Error: Unable to open the file for loading: ", save_path)  # Error log
+		
+func SpawnCoin():
+	var CoinAnime = CoinaniScene.instantiate()
+	add_child(CoinAnime)

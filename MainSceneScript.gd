@@ -3,7 +3,7 @@ extends Control
 # Boolean variables to track if Timer or Goals tabs are open
 var Is_TimerTab_Open: bool = false
 var Is_GoalsTab_Open: bool = false
-
+#var CoinAniScene : PackedScene = preload("res://CoinAnimaiton.tscn")
 # Packed scenes for Timer and Goals UI
 var TimerScene: PackedScene = preload("res://TimerTab.tscn")  # Store the PackedScene
 var TimerPannle: Node = null # Reference to the instance
@@ -61,8 +61,13 @@ func _on_goals_button_pressed() -> void:
 				TimerPannle.queue_free()
 				TimerPannle = null
 			Is_TimerTab_Open = false
-		
-		# Create a new instance and add it to the scene
+		Is_GoalsTab_Open = true
+				# Create a new instance and add it to the scene
 		GoalsSceneNode = GoalsScene.instantiate()
 		add_child(GoalsSceneNode)
-		Is_GoalsTab_Open = true
+		#for i in range(10):
+			#spawncoin()
+			#await get_tree().create_timer(0.2).timeout
+#func spawncoin() :
+	#var CoinSceneChild :Node = CoinAniScene.instantiate()
+	#add_child(CoinSceneChild)

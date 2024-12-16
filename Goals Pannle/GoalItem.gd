@@ -3,6 +3,7 @@ extends HBoxContainer
 # Signal emitted when a goal's checkbox is toggled
 signal goal_toggled(index:int, completed:bool)
 
+
 var goal_data : Dictionary = {} # Stores the goal data
 var goal_index : int = -1  # Stores the index of the goal
 
@@ -43,8 +44,11 @@ func _on_checkbox_toggled(button_pressed: bool) -> void:
 	emit_signal("goal_toggled", goal_index, button_pressed)
 	# update the ui to match the new status
 	_update_label_color(button_pressed)
+	var checkbox : CheckBox = get_node("CheckBox")
+	checkbox.visible = false
 
 # Changes the label's font color based on the checkbox state
+
 func _update_label_color(button_pressed: bool) -> void:
 	var label : Label = get_node("Label")
 	if label:

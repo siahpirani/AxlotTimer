@@ -4,6 +4,7 @@ extends Control
 const SECONDS_IN_MINUTE : int = 60
 const SECONDS_IN_HOUR : int = 3600
 
+@onready var CoinScene : PackedScene = preload("res://CoinAnimaiton.tscn")
 # Flags to control the stopwatch
 var is_StopWatch_Running: bool = true
 var is_StopWatch_Paused: bool = false  # Flag to track if the stopwatch is paused
@@ -32,6 +33,8 @@ func _process(delta: float) -> void:
 func _award_coin() -> void:
 	if Stats != null:
 		Stats.increment_coins(1)
+		var Coinanime = CoinScene.instantiate()
+		add_child(Coinanime)
 	else:
 		printerr("Error: Stats singleton is not available")
 

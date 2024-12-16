@@ -2,7 +2,7 @@ extends Control
 
 # Constants for time calculations
 const SECONDS_IN_MINUTE : int = 60
-
+@onready var CoinScene : PackedScene = preload("res://CoinAnimaiton.tscn")
 @onready var CountDownText : Label = $CountDownText  # Reference to the countdown text label
 var countdowntime : float = 0.0 # Remaining countdown time in seconds
 var is_Countdown_paused : bool = false # Flag indicating if the countdown is paused
@@ -40,6 +40,8 @@ func _process(delta: float) -> void:
 func _award_coin():
 	if Stats != null:
 		Stats.increment_coins(1)
+		var Coinanime = CoinScene.instantiate()
+		add_child(Coinanime)
 	else:
 		printerr("Error: Stats singleton is not available")
 

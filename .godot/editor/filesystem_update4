@@ -1,14 +1,12 @@
-res://Goals Pannle/GoalsScript.gd
-res://Goals Pannle/GoalListScene.tscn
-res://MainScreen.tscn
-res://Goals Pannle/GoalsShape.tscn
-res://MainSceneScript.gd
-res://Goals Pannle/GoalItem.tscn
+res://CoinAnimaiton.tscn
+res://coin_animaiton.gd
 res://Goals Pannle/GoalItem.gd
+res://MainScreen.tscn
+res://Goals Pannle/GoalListScene.tscn
+res://Goals Pannle/GoalItem.tscn
+res://CoinDisplay.tscn
+res://MainSceneScript.gd
 res://Goals Pannle/GoalScene.gd
 res://CountDown/Countdown_Script.gd
-res://Promodo/PromodoScript.gd
-res://stats.gd
 res://StopWatch/StopWatchFullScreen.gd
-res://CoinDisplay.tscn
-res://CoinDisplay.gd
+res://Promodo/PromodoScript.gd

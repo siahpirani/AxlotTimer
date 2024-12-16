@@ -9,6 +9,7 @@ var work_timer_passed: int = int(Stats.ReturnPromodoWorkTime())
 var rest_timer_passed: int = int(Stats.ReturnPromodoRestTime())
 var session_numbers_passed: int = int(Stats.ReturnPromodoSessionNumber())
 
+@onready var CoinScene : PackedScene = preload("res://CoinAnimaiton.tscn")
 # References to UI elements
 @onready var work_timer_text : Label = $WorkTimer
 @onready var rest_timer_text : Label = $"Rest Timer"
@@ -41,6 +42,8 @@ func _process(delta: float) -> void:
 func _award_coin() -> void:
 	if Stats != null:
 		Stats.increment_coins(1)
+		var Coinanime = CoinScene.instantiate()
+		add_child(Coinanime)
 	else:
 		printerr("Error: Stats singleton is not available")
 
