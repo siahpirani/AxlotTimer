@@ -27,6 +27,7 @@ theme_override_font_sizes/font_size = 50
 text = "StopWatch"
 
 [node name="Panle_StopWatch" type="Panel" parent="Control/TimerTyperButtonConrainer/StopWatchButton"]
+visible = false
 layout_mode = 2
 offset_top = 156.0
 offset_right = 1075.0
@@ -117,7 +118,6 @@ theme_override_font_sizes/font_size = 50
 text = "Promodo"
 
 [node name="Panle_Promodo" type="Panel" parent="Control/TimerTyperButtonConrainer/PromodoButton"]
-visible = false
 layout_mode = 0
 offset_left = -565.0
 offset_top = 156.0
@@ -193,6 +193,10 @@ offset_left = 37.0
 offset_top = 43.0
 offset_right = 1024.0
 offset_bottom = 146.0
+min_value = 600.0
+max_value = 10800.0
+step = 300.0
+value = 600.0
 
 [node name="HSlider_Rest_Promodo2" type="HSlider" parent="Control/TimerTyperButtonConrainer/PromodoButton/Panle_Promodo"]
 layout_mode = 0
@@ -200,6 +204,10 @@ offset_left = 37.0
 offset_top = 193.0
 offset_right = 1024.0
 offset_bottom = 296.0
+min_value = 300.0
+max_value = 10800.0
+step = 300.0
+value = 300.0
 
 [node name="HSlider_Sessions_Promodo" type="HSlider" parent="Control/TimerTyperButtonConrainer/PromodoButton/Panle_Promodo"]
 layout_mode = 0
@@ -207,6 +215,9 @@ offset_left = 37.0
 offset_top = 346.0
 offset_right = 1024.0
 offset_bottom = 449.0
+min_value = 1.0
+max_value = 12.0
+value = 1.0
 
 [connection signal="pressed" from="Control/TimerTyperButtonConrainer/StopWatchButton" to="Control" method="_on_stop_watch_button_pressed"]
 [connection signal="pressed" from="Control/TimerTyperButtonConrainer/StopWatchButton/Panle_StopWatch/StartEndButton_StopWatch" to="Control" method="_on_start_end_button_stop_watch_pressed"]

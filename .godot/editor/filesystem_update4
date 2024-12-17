@@ -1,12 +1,6 @@
-res://CoinAnimaiton.tscn
-res://coin_animaiton.gd
-res://Goals Pannle/GoalItem.gd
 res://MainScreen.tscn
 res://Goals Pannle/GoalListScene.tscn
 res://Goals Pannle/GoalItem.tscn
 res://CoinDisplay.tscn
-res://MainSceneScript.gd
-res://Goals Pannle/GoalScene.gd
-res://CountDown/Countdown_Script.gd
-res://StopWatch/StopWatchFullScreen.gd
-res://Promodo/PromodoScript.gd
+res://CoinAnimaiton.tscn
+res://TimerTab.tscn

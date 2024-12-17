@@ -1,32 +1,34 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1734317639
+::res://::1734473947
+CoinAnimaiton.tscn::PackedScene::6021050413658541960::1734358045::0::1::::<><>::res://coin_animaiton.gd<>uid://brwtl040ynex1::::res://Audio/coin-257878.mp3<>uid://keotyckpufqi::::res://Images/Icon/e26ace0a6c2d0eac4e89c789d6e551bc-32bits-32.png
 CoinDisplay.gd::GDScript::-1::1734194127::0::1::::<>CanvasLayer<>::
-CoinDisplay.tscn::PackedScene::1791473102669197930::1734194127::0::1::::<><>::res://CoinDisplay.gd
+CoinDisplay.tscn::PackedScene::1791473102669197930::1734358045::0::1::::<><>::res://CoinDisplay.gd<>uid://keotyckpufqi::::res://Images/Icon/e26ace0a6c2d0eac4e89c789d6e551bc-32bits-32.png
+coin_animaiton.gd::GDScript::-1::1734321224::0::1::::<>Node2D<>::
 icon.svg::CompressedTexture2D::3904490113494243773::1734194127::1734317555::1::::<><>::
-MainSceneScript.gd::GDScript::-1::1734194127::0::1::::<>Control<>::
-MainScreen.tscn::PackedScene::6125709101737212440::1734194127::0::1::::<><>::res://MainSceneScript.gd
+MainSceneScript.gd::GDScript::-1::1734356606::0::1::::<>Control<>::
+MainScreen.tscn::PackedScene::6125709101737212440::1734358044::0::1::::<><>::res://MainSceneScript.gd
 stats.gd::GDScript::-1::1734194127::0::1::::<>Node<>::
 TimersControlScript.gd::GDScript::-1::1734194127::0::1::::<>Control<>::
 TimerTab.tscn::PackedScene::1364863811773717253::1734194127::0::1::::<><>::res://TimersControlScript.gd
-::res://Audio/::1734317639
+::res://Audio/::1734317640
 coin-257878.mp3::AudioStreamMP3::3626221961776039040::1734317630::1734317640::1::::<><>::
-::res://CountDown/::1734194127
+::res://CountDown/::1734358043
 CountDown_Scene.tscn::PackedScene::5743115691274166961::1734194127::0::1::::<><>::res://CountDown/Countdown_Script.gd
-Countdown_Script.gd::GDScript::-1::1734194127::0::1::::<>Control<>::
-::res://Goals Pannle/::1734317555
+Countdown_Script.gd::GDScript::-1::1734358043::0::1::::<>Control<>::
+::res://Goals Pannle/::1734358127
 checkbox.png::CompressedTexture2D::5748932130091778002::1734194127::1734317555::1::::<><>::
 GoalAddingScene.tscn::PackedScene::4194162321496797525::1734194127::0::1::::<><>::
-GoalItem.gd::GDScript::-1::1734194127::0::1::::<>HBoxContainer<>::
-GoalItem.tscn::PackedScene::9156327312309427499::1734194127::0::1::::<><>::uid://c64iwl6gi5xeq::::res://Goals Pannle/square.png<>res://Goals Pannle/GoalItem.gd<>uid://cn53cpr3o7et3::::res://Goals Pannle/checkbox.png
-GoalListScene.tscn::PackedScene::6139058299028043008::1734194127::0::1::::<><>::res://Goals Pannle/GoalScene.gd
-GoalScene.gd::GDScript::-1::1734194127::0::1::::<>Control<>::
+GoalItem.gd::GDScript::-1::1734357506::0::1::::<>HBoxContainer<>::
+GoalItem.tscn::PackedScene::9156327312309427499::1734358127::0::1::::<><>::uid://c64iwl6gi5xeq::::res://Goals Pannle/square.png<>res://Goals Pannle/GoalItem.gd<>uid://cn53cpr3o7et3::::res://Goals Pannle/checkbox.png
+GoalListScene.tscn::PackedScene::6139058299028043008::1734358044::0::1::::<><>::res://Goals Pannle/GoalScene.gd
+GoalScene.gd::GDScript::-1::1734357801::0::1::::<>Control<>::
 square.png::CompressedTexture2D::7009088124371276516::1734194127::1734317555::1::::<><>::
 ::res://Images/::1734317605
 ::res://Images/Icon/::1734317639
 e26ace0a6c2d0eac4e89c789d6e551bc-32bits-32.png::CompressedTexture2D::711031179504690444::1734317620::1734317620::1::::<><>::
-::res://Promodo/::1734194127
+::res://Promodo/::1734358043
 PromodoFullScreen.tscn::PackedScene::5102848950431711998::1734194127::0::1::::<><>::res://Promodo/PromodoScript.gd
-PromodoScript.gd::GDScript::-1::1734194127::0::1::::<>Control<>::
-::res://StopWatch/::1734194127
-StopWatchFullScreen.gd::GDScript::-1::1734194127::0::1::::<>Control<>::
+PromodoScript.gd::GDScript::-1::1734358043::0::1::::<>Control<>::
+::res://StopWatch/::1734358043
+StopWatchFullScreen.gd::GDScript::-1::1734358043::0::1::::<>Control<>::
 StopWatchScene.tscn::PackedScene::1029919271363837300::1734194127::0::1::::<><>::res://StopWatch/StopWatchFullScreen.gd
